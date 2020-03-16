@@ -15,10 +15,10 @@ public:
 	void VerifyFactorisition(std::vector<std::vector<double>>& u, std::vector<std::vector<double>>& s,
 		std::vector<std::vector<double>>& v);
 	int GetRank(std::vector<std::vector<double>>& s);
-	void svd::GetPseudoinverse(std::vector<std::vector<double>>&  s,
+	void GetPseudoinverse(std::vector<std::vector<double>>&  s,
 		std::vector<std::vector<double>>&  u, std::vector<std::vector<double>>&  v,
 		std::vector<std::vector<double>>&  pseudoinv);
-	void svd::VerifyPseudoinverse(std::vector<std::vector<double>>& A, 
+	void VerifyPseudoinverse(std::vector<std::vector<double>>& A, 
 		std::vector<std::vector<double>>& A_pesudoinv);
 
 private:
