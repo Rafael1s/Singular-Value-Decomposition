@@ -49,7 +49,7 @@ and several private functions, see read_matrix.h
 
 ### Briefly about SVD algorithm
 
-#### 1. Eigenvalues of the symmetric matrix 
+#### 1. Eigenvalues of the symmetric matrix (Power Iteration algorithm)
 
 Let _A_ be the input square matrix. First we find eigenvalues of the matrix   
    **B = A^t * A**.  Matrix **B** is symmetric
