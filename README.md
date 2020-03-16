@@ -28,11 +28,25 @@ _void **VerifyPseudoinverse**(std::vector<std::vector<double>>& A,
 
 and a number of private functions, see **svd.h**.
 
-**Tracking**
+### Tracking
 
 The constructor svd contains the boolean variable _track_.    
 The default value of _track_ is _true_ that provides the extended log on the console.     
 Set _track = false_ to reduce the log.     
+
+
+### Class read_matrix
+
+This class contains 2 public functions:
+   
+_std::string **get_file_name();**_
+
+_void **get_matrix_by_file_name**(
+      std::string filename, std::vector<std::vector<double>>& matrix);_
+	
+and several private functions, see read_matrix.h
+	
+
 
 
 
