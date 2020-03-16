@@ -6,7 +6,8 @@ This package contains 2 C++ classes: **svd**  and **read_matrix**  and test file
 
 This class provides factorization of any square matrix **M** by **SVD algorithm** for the square matrices:   
 
-          M = USV^t,    
+          M = USV^t,
+	  
 where _S_ is the diagonal matrix, and _U_, _V_ are two orthonormal matrices.  
 
  This class contains 5 public functions   
@@ -45,6 +46,22 @@ _void **get_matrix_by_file_name**(
       std::string filename, std::vector<std::vector<double>>& matrix);_
 	
 and several private functions, see read_matrix.h
+
+### Briefly about SVD algorithm
+
+#### 1. Eigenvalues of the symmetric matrix 
+
+Let _A_ be the input square matrix. First we find eigenvalues of the matrix   
+   **B = A^t * A**.  Matrix **B** is symmetric
+   
+#### 2. Gauss-Jordan Elimination algorithm
+
+#### 3. Eigenalues of target matrix 
+
+(TBD)
+
+
+
 	
 
 
