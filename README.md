@@ -4,11 +4,8 @@ This package contains 2 C++ classes: **svd**  and **read_matrix**  and test file
 
 ### Class svd
 
-This class provides factorization of any square matrix **M** by **SVD algorithm** for the square matrices:   
-
-          M = USV^t,
-	  
-where _S_ is the diagonal matrix, and _U_, _V_ are two orthonormal matrices.  
+This class provides factorization of any square matrix **M** by **SVD algorithm** for   
+the square matrices:   _M = USV^t_,  where _S_ is the diagonal matrix, and _U_, _V_ are two orthonormal matrices.  
 
  This class contains 5 public functions   
    
@@ -51,14 +48,30 @@ and several private functions, see read_matrix.h
 
 #### 1. Eigenvalues of the symmetric matrix (Power Iteration algorithm)
 
-Let _A_ be the input square matrix. First we find eigenvalues of the matrix   
-   **B = A^t * A**.  Matrix **B** is symmetric
+Let _A_ be the input square matrix. First we find eigenvalues of the symmetric matrix   
+_B = A^t * A_. The first loop in the function _GetEigenvalsEigenvecs_ finds   
+the maximal eigenvalue of _B_ (in magnitude).  For explanations of this algorithm, see
+
+1. [qr-algorithm](http://madrury.github.io/jekyll/update/statistics/2017/10/04/qr-algorithm.html),
+2. [Power itaration](https://en.wikipedia.org/wiki/Power_iteration)
+
+The function _GetEigenvalsEigenvecs_ is recursive, so the remaining eigenvalues will be calculated
+by the following recursive calls.  The function _ReduceMatrix_ transforms the matrix _B_ to the matrix
+_B_ of the m_size - 1, where m_size is the size if current matrix _B_.   
    
 #### 2. Gauss-Jordan Elimination algorithm
 
+The matrix _M = B - \lambda*I_ is name the traget matrix. For each eigenvalue \lambda,
+the target matrix _B_ -  is transformed into an upper triangular matrix, _so called row ecehlon form_,   seee
+
+3. [Gaussian elimination](https://en.wikipedia.org/wiki/Gaussian_elimination)
+
+see function _GaussJordanElimination_.
+
 #### 3. Eigenalues of target matrix 
 
-(TBD)
+Further, for each eigenvalue \lambda,  the eigenvector vector V(\lambda) of the target matrix _M_ will be found. 
+This is performed by Gauss-Jordan Elimination algorithm, 
 
 
 
