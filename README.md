@@ -61,7 +61,7 @@ _B_ of the m_size - 1, where m_size is the size if current matrix _B_.
    
 #### 2. Gauss-Jordan Elimination algorithm
 
-The matrix _M = B - \lambda*I_ is name the traget matrix. For each eigenvalue \lambda,
+The matrix _M = B - \lambda*I_ is named the traget matrix. For each eigenvalue \lambda,
 the target matrix _B_ -  is transformed into an upper triangular matrix, _so called row ecehlon form_,   seee
 
 3. [Gaussian elimination](https://en.wikipedia.org/wiki/Gaussian_elimination)
